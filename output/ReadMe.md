@@ -1,12 +1,14 @@
 
-# undefined
+# 
 
-[![Github Link](https://img.shields.io/badge/GitHub-elliotmrgn-brightgreen)](https://github.com/elliotmrgn)
+[![Github Link](https://img.shields.io/badge/GitHub--brightgreen)](https://github.com/)
+[![Contact Me](https://img.shields.io/badge/Contact%20Me-email-blue)](mailto:)
 
-[![Github Picture](https://avatars0.githubusercontent.com/u/36462978?v=4)]
+
+[![Github Picture](undefined)]
 
 ## Description
-undefined
+
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -17,21 +19,21 @@ undefined
 
 
 ## Installation
-undefined
+
 
 ## Usage 
-undefined
+
 
 ## License
-undefined
+
 
 ## Contributing
-undefined
+
 
 ## Tests
-undefined
+
 
 ## Questions
-For any questions please email: undefined
+For any questions please email: 
 
 

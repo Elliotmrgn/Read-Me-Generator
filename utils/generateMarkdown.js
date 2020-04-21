@@ -3,6 +3,8 @@ function generateMarkdown(data) {
 # ${data.title}
 
 [![Github Link](https://img.shields.io/badge/GitHub-${data.gitName}-brightgreen)](https://github.com/${data.gitName})
+[![Contact Me](https://img.shields.io/badge/Contact%20Me-email-blue)](mailto:${data.email})
+
 
 [![Github Picture](${data.gitPic})]
 

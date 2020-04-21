@@ -3,7 +3,6 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
 
 
 
@@ -12,8 +11,8 @@ function questions() {
         {
             type: "input",
             name: "gitName",
-            message: "What is your GitHub username?"
-        }/* ,
+            message: "What is your GitHub username?",
+        } ,
         {
             type:"input",
             name:"email",
@@ -53,7 +52,7 @@ function questions() {
             type:"input",
             name: "tests",
             message: "What command should be run to make tests?"
-        } */
+        } 
     ]);
 }
 
@@ -69,9 +68,13 @@ function writeToFile(fileName, data) {
 }
 
 async function init() {
+    //user input
     const answers = await questions();
+    //adds github pic from api call
     answers.gitPic = await api.getUser(answers.gitName)
+    //creates the markdown
     const html = generateMarkdown(answers)
+    //writes the markdown to the file
     writeToFile("output/ReadMe.md", html)
 }
 

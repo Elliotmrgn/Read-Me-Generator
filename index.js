@@ -5,12 +5,19 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
+
+
 function questions() {
     return inquirer.prompt([
         {
             type: "input",
             name: "gitName",
             message: "What is your GitHub username?"
+        }/* ,
+        {
+            type:"input",
+            name:"email",
+            message:"What is your email?"
         },
         {
             type: "input",
@@ -21,7 +28,7 @@ function questions() {
             type: "input",
             name: "description",
             message: "What is your project's description?"
-        }/*,
+        },
         {
             type: "input",
             name: "install",
@@ -30,7 +37,22 @@ function questions() {
         {
             type: "input",
             name: "usage",
-            message: "Describe your projects usage"
+            message: "Describe your projects usage:"
+        },
+        {
+            type : "input",
+            name: "license",
+            message: "What kind of license should your software have?",
+        },
+        {
+            type:"input",
+            name:"contributing",
+            message: "Information about making contributions: "
+        },
+        {
+            type:"input",
+            name: "tests",
+            message: "What command should be run to make tests?"
         } */
     ]);
 }
@@ -48,10 +70,9 @@ function writeToFile(fileName, data) {
 
 async function init() {
     const answers = await questions();
-    // const gitHub = api.getUser(answers.gitName)
-    // console.log("init -> gitHub", gitHub)
+    answers.gitPic = await api.getUser(answers.gitName)
     const html = generateMarkdown(answers)
-    writeToFile("ReadMe.md", html)
+    writeToFile("output/ReadMe.md", html)
 }
 
 init();

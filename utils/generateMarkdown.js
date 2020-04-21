@@ -2,21 +2,39 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 
+[![Github Link](https://img.shields.io/badge/GitHub-${data.gitName}-brightgreen)](https://github.com/${data.gitName})
+
+[![Github Picture](${data.gitPic})]
+
 ## Description
 ${data.description}
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
 * [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
 
 ## Installation
+${data.install}
 
 ## Usage 
-
-## Credits
+${data.usage}
 
 ## License
+${data.license}
+
+## Contributing
+${data.contributing}
+
+## Tests
+${data.tests}
+
+## Questions
+For any questions please email: ${data.email}
+
 
 `}
 
